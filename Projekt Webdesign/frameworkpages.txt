@@ -1,0 +1,8 @@
+!!! http://jsanim.com/ !!!
+
+http://gx.riccardodegni.net/demos/core ->hover me
+http://fx.inetcat.com/manuals.php#b3
+http://www.perlunity.de/javascript/scripts/javascript_0400_main.shtml
+http://webstandard.kulando.de/post/2008/08/21/top-10-aller-javascript-frameworks
+eventuell: http://processingjs.org/exhibition/
+http://matthiasschuetz.com/javascript-framework-matrix/de/
