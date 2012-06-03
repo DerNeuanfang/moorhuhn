@@ -3,11 +3,18 @@
  */
  
  #M {
- margin-left:-200px;
+ margin-left:-400px;
  }
  
  #O1 {
  margin-left:-200px;
  }
- 
- 
+
+ #fenster {
+background-color: white; 
+border: 1px solid;
+width: 920px; 
+height: 550px; 
+position: relative; 
+margin: 100px auto;
+ }
