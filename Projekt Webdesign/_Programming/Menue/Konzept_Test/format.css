@@ -3,19 +3,27 @@
  */
  
  #M {
- margin-left:-400px;
+ left:-400px;
+ position: absolute;
+ top: 20px;
  }
  
+ 
  #O1 {
- margin-left:-200px;
+ left:-300px;
+ position: absolute;
+ top: 19px;
  }
+ 
 
- #fenster {
+ #window {
 background-color: white; 
 border: 1px solid;
 width: 920px; 
 height: 550px; 
-position: relative; 
-margin: 100px auto;
+position: absolute; 
+left: 50%;
+top: 50%;
+margin: -275px 0 0 -475px;
 overflow:hidden;
  }
