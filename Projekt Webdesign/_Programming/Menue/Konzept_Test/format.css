@@ -2,52 +2,68 @@
  * @author kleinm
  */
  
+ body {
+ background-color: grey;
+ }
+ 
+ 
  #M {
- left:-400px;
+ left:-150px;
  position: absolute;
- top: 20px;
+ top: 44px;
  }
  
  #O1 {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 43px;
  }
  
   #O2 {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 0px;
  }
  
   #R {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 44px;
  }
  
   #H {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 44px;
+ }
+ 
+  #H2 {
+ left:-150px;
+ position: absolute;
+ top: 44px;
  }
  
   #U {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 45px;
  }
  
   #N {
- left:-300px;
+ left:-150px;
  position: absolute;
- top: 19px;
+ top: 45px;
  }
  
+ #huhn {
+ left:630px;
+ position: absolute;
+ top: 347px;
+ }
 
  #window {
 background-color: white; 
-border: 1px solid;
+border: 3px solid;
 width: 920px; 
 height: 550px; 
 position: absolute; 

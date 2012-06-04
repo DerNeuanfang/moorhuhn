@@ -3,39 +3,46 @@
  */
 
 function main () {
+//Schriftzug "Moorhuhn" wird animiert
+	$("#M").animate({
+	"marginLeft": "+=150"
+	},2350);
 
-$("#M").animate({
-"marginLeft": "+=400"
-});
+	$("#O1").animate({
+	"marginLeft": "+=219"
+	},2050);
 
-$("#O1").animate({
-"marginLeft": "+=369"
-});
+	$("#O2").animate({
+	"marginLeft": "+=273"
+	},1750);
 
-$("#O2").animate({
-"marginLeft": "+=369"
-});
+	$("#R").animate({
+	"marginLeft": "+=331"
+	},1350);
 
-$("#R").animate({
-"marginLeft": "+=469"
-});
+	$("#H").animate({
+	"marginLeft": "+=381"
+	},1050);
 
-$("#H").animate({
-"marginLeft": "+=369"
-});
+	$("#U").animate({
+	"marginLeft": "+=430"
+	},750);
 
-$("#U").animate({
-"marginLeft": "+=369"
-});
+	$("#H2").animate({
+	"marginLeft": "+=480"
+	},450);
+	
+	$("#N").animate({
+	"marginLeft": "+=530"
+	},150);
 
-$("#H2").animate({
-"marginLeft": "+=369"
-});
 
-$("#N").animate({
-"marginLeft": "+=369"
-});
+//Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
 
+
+	
+//Moorhuhn-Bild animieren
+	$("#huhn").fadeIn('slow', function() {});
  
 
 }
