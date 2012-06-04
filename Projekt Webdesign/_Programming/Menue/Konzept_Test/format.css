@@ -8,8 +8,37 @@
  top: 20px;
  }
  
- 
  #O1 {
+ left:-300px;
+ position: absolute;
+ top: 19px;
+ }
+ 
+  #O2 {
+ left:-300px;
+ position: absolute;
+ top: 19px;
+ }
+ 
+  #R {
+ left:-300px;
+ position: absolute;
+ top: 19px;
+ }
+ 
+  #H {
+ left:-300px;
+ position: absolute;
+ top: 19px;
+ }
+ 
+  #U {
+ left:-300px;
+ position: absolute;
+ top: 19px;
+ }
+ 
+  #N {
  left:-300px;
  position: absolute;
  top: 19px;
