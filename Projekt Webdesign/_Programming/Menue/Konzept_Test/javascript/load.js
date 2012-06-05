@@ -42,7 +42,7 @@ function main () {
 
 	
 //Moorhuhn-Bild animieren
-	$("#huhn").fadeIn('slow', function() {});
+
  
 
 }
