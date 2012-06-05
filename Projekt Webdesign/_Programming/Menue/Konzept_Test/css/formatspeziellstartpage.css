@@ -1,3 +1,9 @@
+  #contact {
+ left:40%;
+ bottom: 0;
+ position:absolute;
+ }
+ 
  #M {
  left:-150px;
  position: absolute;
