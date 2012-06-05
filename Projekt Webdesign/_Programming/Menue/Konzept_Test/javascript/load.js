@@ -4,45 +4,50 @@
 
 function main () {
 //Schriftzug "Moorhuhn" wird animiert
-	$("#M").animate({
+//ich baue eine delay funktion ein aus folgendem Grund:
+//Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
+//Mit der delay() funktion verhindere ich das
+	$("#M").delay(1550).animate({
 	"marginLeft": "+=150"
-	},2350);
+	});
 
-	$("#O1").animate({
+	$("#O1").delay(1350).animate({
 	"marginLeft": "+=219"
-	},2050);
+	});
 
-	$("#O2").animate({
+	$("#O2").delay(1150).animate({
 	"marginLeft": "+=273"
-	},1750);
+	});
 
-	$("#R").animate({
+	$("#R").delay(950).animate({
 	"marginLeft": "+=331"
-	},1350);
+	});
 
-	$("#H").animate({
+	$("#H").delay(750).animate({
 	"marginLeft": "+=381"
-	},1050);
+	});
 
-	$("#U").animate({
+	$("#U").delay(550).animate({
 	"marginLeft": "+=430"
-	},750);
+	});
 
-	$("#H2").animate({
+	$("#H2").delay(350).animate({
 	"marginLeft": "+=480"
-	},450);
+	});
 	
-	$("#N").animate({
+	$("#N").delay(150).animate({
 	"marginLeft": "+=530"
-	},150);
+	});
 
 
 //Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
-
-
+	$("#sg1").delay(1000).show();
+	$("#sg2").delay(1000).fadeIn();
+	$("#sg3").delay(1000).fadeIn();
+	$("#sk1").delay(1000).fadeIn();
 	
 //Moorhuhn-Bild animieren
-
+	$("#huhn").delay(1000).show();
  
 
 }
