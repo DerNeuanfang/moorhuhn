@@ -56,19 +56,22 @@
  #sg1 {
  left: 270px;
  position:absolute;
- top: 150px;
+ top: 150px; 
+ display: none;
  }
  
  #sg2 {
  left: 600px;
  position:absolute;
  top: 150px;
+ display: none;
  }
  
  #sg3 {
  left: 540px;
  position:absolute;
  top: 360px;
+ display: none;
  }
  
  
@@ -76,10 +79,12 @@
  left: 150px;
  position:absolute;
  top: 300px;
+ display: none;
  }
  
  #huhn {
  left: 620px;
  position:absolute;
  top: 346px;
+ display: none;
  }

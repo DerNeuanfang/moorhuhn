@@ -41,13 +41,13 @@ function main () {
 
 
 //Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
-	$("#sg1").delay(1000).show();
-	$("#sg2").delay(1000).fadeIn();
-	$("#sg3").delay(1000).fadeIn();
-	$("#sk1").delay(1000).fadeIn();
+	$("#sg1").delay(2000).show(0);
+	$("#sg2").delay(2250).show(0);
+	$("#sg3").delay(2500).show(0);
+	$("#sk1").delay(2750).show(0);
 	
 //Moorhuhn-Bild animieren
-	$("#huhn").delay(1000).show();
+	$("#huhn").delay(2900).fadeIn(1700);
  
 
 }
