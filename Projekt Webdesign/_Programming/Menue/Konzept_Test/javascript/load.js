@@ -2,6 +2,10 @@
  * @author kleinm
  */
 
+ 
+ 
+ 
+
 function main () {
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
