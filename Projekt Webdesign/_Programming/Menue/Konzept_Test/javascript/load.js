@@ -2,15 +2,12 @@
  * @author kleinm
  */
 
- 
- 
- 
-
 function main () {
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
 //Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
 //Mit der delay() funktion verhindere ich das
+	
 	$("#M").delay(1550).animate({
 	"marginLeft": "+=150"
 	});
