@@ -1,7 +1,3 @@
-/**
- * @author kleinm
- */
-
 /*!
  * jQuery JavaScript Library v1.7.2
  * http://jquery.com/
