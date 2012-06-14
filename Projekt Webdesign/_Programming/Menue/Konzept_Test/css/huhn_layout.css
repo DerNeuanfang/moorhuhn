@@ -1,0 +1,25 @@
+#huhnstartpage {
+ left: 620px;
+ position:absolute;
+ top: 346px;
+ display: none;
+ }
+ 
+ #huhnaboutus {
+ left: 620px;
+ position:absolute;
+ bottom: 0;
+ }
+ 
+ #huhnimpressum {
+ left: 0px;
+ position:absolute;
+ bottom: 330px;
+ }
+ 
+  
+ #huhncontact {
+ right: 0px;
+ position:absolute;
+ bottom: 120px;
+ }

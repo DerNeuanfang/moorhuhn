@@ -1,20 +1,3 @@
-  #navi_with_animation {
- left:0;
- text-align: center;
- width: 100%;
- bottom: 0;
- position:absolute;
- display:none;
- }
- 
- #navi_without_animation {
- left:0;
- text-align: center;
- width: 100%;
- bottom: 0;
- position:absolute;
- }
- 
  #M {
  left:-150px;
  position: absolute;
@@ -93,21 +76,4 @@
  display: none;
  }
  
- #huhnstartpage {
- left: 620px;
- position:absolute;
- top: 346px;
- display: none;
- }
  
- #huhnaboutus {
- left: 620px;
- position:absolute;
- bottom: 0;
- }
- 
-  #huhnimpressum {
- left: 0px;
- position:absolute;
- bottom: 330;
- }
