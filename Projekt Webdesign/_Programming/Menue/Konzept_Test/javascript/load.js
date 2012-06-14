@@ -55,6 +55,9 @@ function main () {
 	
 //Moorhuhn-Bild animieren
 	$("#huhnstartpage").delay(2900).fadeIn(1700);
+	
+//Navi-Leiste animieren
+	$("#navi_with_animation").delay(2900).fadeIn(1700);
  
 
 }
