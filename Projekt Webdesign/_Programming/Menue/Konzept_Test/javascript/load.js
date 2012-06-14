@@ -55,6 +55,17 @@ function main () {
 	
 //Moorhuhn-Bild animieren
 	$("#huhnstartpage").delay(2900).fadeIn(1700);
+
+//Buttons animieren
+//fadeIn
+$("#button_start").delay(2900).fadeIn(1700);
+
+//mouseover effekt
+$("#button_start").hover(function(){$(this).fadeOut(50);$(this).fadeIn(200);});
+//$("#button_start").mouseover(function(){$("#button_start2").animate({"marginLeft": "+=100"})});
+//$("#button_start").hover(function(){$("#button_start2").animate({"marginLeft": "-=100"})});
+
+	
 	
 //Navi-Leiste animieren
 	$("#navi_with_animation").delay(2900).fadeIn(1700);
