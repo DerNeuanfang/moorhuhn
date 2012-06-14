@@ -3,7 +3,8 @@
  */
 
 function main () {
-var sound=new Audio(
+//var sound=new Audio(pfad);
+
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
 //Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
@@ -53,7 +54,7 @@ var sound=new Audio(
 	window.setTimeout(function() {sound.play()},2750);
 	
 //Moorhuhn-Bild animieren
-	$("#huhn").delay(2900).fadeIn(1700);
+	$("#huhnstartpage").delay(2900).fadeIn(1700);
  
 
 }
