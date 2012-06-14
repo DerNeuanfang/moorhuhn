@@ -3,6 +3,7 @@
  */
 
 function main () {
+var sound=new Audio(
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
 //Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
@@ -43,9 +44,13 @@ function main () {
 
 //Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
 	$("#sg1").delay(2000).show(0);
+	window.setTimeout(function() {sound.play()},2000);
 	$("#sg2").delay(2250).show(0);
+	window.setTimeout(function() {sound.play()},2250);
 	$("#sg3").delay(2500).show(0);
+	window.setTimeout(function() {sound.play()},2500);
 	$("#sk1").delay(2750).show(0);
+	window.setTimeout(function() {sound.play()},2750);
 	
 //Moorhuhn-Bild animieren
 	$("#huhn").delay(2900).fadeIn(1700);

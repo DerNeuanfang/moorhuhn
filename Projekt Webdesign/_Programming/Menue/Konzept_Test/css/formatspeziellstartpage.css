@@ -1,5 +1,7 @@
-  #contact {
- left:40%;
+  #navi {
+ left:0;
+ text-align: center;
+ width: 100%;
  bottom: 0;
  position:absolute;
  }
