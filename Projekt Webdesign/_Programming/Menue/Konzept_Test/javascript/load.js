@@ -3,7 +3,7 @@
  */
 
 function main () {
-//var sound=new Audio(pfad);
+//var sound=new Audio(../sounds/schuss.ogg);
 
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
@@ -58,12 +58,11 @@ function main () {
 
 //Buttons animieren
 //fadeIn
-$("#button_start").delay(2900).fadeIn(1700);
+	$("#button_start").delay(2900).fadeIn(1700);
 
 //mouseover effekt
-$("#button_start").hover(function(){$(this).fadeOut(50);$(this).fadeIn(200);});
-//$("#button_start").mouseover(function(){$("#button_start2").animate({"marginLeft": "+=100"})});
-//$("#button_start").hover(function(){$("#button_start2").animate({"marginLeft": "-=100"})});
+	$("#button_start").mouseover(function(){$(this).fadeOut(50);$(this).fadeIn(100);});
+
 
 	
 	
