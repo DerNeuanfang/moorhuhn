@@ -7,7 +7,8 @@ body {
  }
  
  
- #window {
+ #window 
+{
 background-color: white; 
 border: 3px solid;
 width: 920px; 
@@ -17,4 +18,5 @@ left: 50%;
 top: 50%;
 margin: -275px 0 0 -475px;
 overflow:hidden;
- }
+}
+ 

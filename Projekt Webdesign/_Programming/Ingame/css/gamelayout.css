@@ -1,0 +1,11 @@
+/**
+* @author Sebastian Göltz
+*/
+
+#spaceBack {
+background: url(../images/backgroundSpace2.png) no-repeat no-repeat;
+left:-20%;
+top:-15%;
+position:absolute;
+}
+
