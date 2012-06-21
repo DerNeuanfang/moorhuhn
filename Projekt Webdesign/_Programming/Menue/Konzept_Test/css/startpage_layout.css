@@ -1,10 +1,32 @@
 /**
  * @author kleinm
  */
- #button_start {
+ #button_start_0 {
  left: 320px;
- top: 153px;
+ top: 150px;
  position:absolute;
+ display:none;
+ }
+  
+#button_start_1 {
+ left: 650px;
+ top: 150px;
+ position:absolute;
+ display:none;
+ }
+ 
+ #button_start_2 {
+ left: 430px;
+ top: 360px;
+ position:absolute;
+ display:none;
+ }
+ 
+ #button_start_3 {
+ left: 190px;
+ top: 295px;
+ position:absolute;
+ display:none;
  }
  
  #M {
