@@ -1,15 +1,6 @@
 /**
  * @author kleinm
- */ 
- #navi_with_animation {
- left:0;
- text-align: center;
- width: 100%;
- bottom: 0;
- position:absolute;
- display:none;
- }
- 
+ */  
  #navi_without_animation {
  left:0;
  text-align: center;

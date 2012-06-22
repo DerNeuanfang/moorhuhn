@@ -59,20 +59,18 @@ function main () {
 //Buttons animieren
 //fadeIn
 	$("#button_start_0").delay(2900).fadeIn(1700);
-	$("#button_start_1").delay(2900).fadeIn(1700);
-	$("#button_start_2").delay(2900).fadeIn(1700);
-	$("#button_start_3").delay(2900).fadeIn(1700);
+	$("#button_start_1").delay(3100).fadeIn(1700);
+	$("#button_start_2").delay(3300).fadeIn(1700);
+	$("#button_start_3").delay(3500).fadeIn(1700);
 	
 //mouseover effekt
-	$("#button_start_0").mouseover(function(){$(this).fadeOut(50);$(this).fadeIn(100);});
-	$("#button_start_1").mouseover(function(){$(this).fadeOut(50);$(this).fadeIn(100);});
-	$("#button_start_2").mouseover(function(){$(this).fadeOut(50);$(this).fadeIn(100);});
-	$("#button_start_3").mouseover(function(){$(this).fadeOut(50);$(this).fadeIn(100);});
+	$("#button_start_0").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
+	$("#button_start_1").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
+	$("#button_start_2").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
+	$("#button_start_3").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
 
 	
-	
-//Navi-Leiste animieren
-	$("#navi_with_animation").delay(2900).fadeIn(1700);
+
  
 
 }
