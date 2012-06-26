@@ -3,8 +3,10 @@
  */
 
 function main () {
-//var sound=new Audio(../sounds/schuss.ogg);
-
+//Soundvariable deklarieren
+var schuss = new Audio('schuss.ogg');
+var schuss2 = new Audio('schuss.ogg');
+//window.setTimeout(function() {schuss.play()},2000);
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
 //Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
@@ -44,14 +46,15 @@ function main () {
 
 
 //Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
+	
 	$("#sg1").delay(2000).show(0);
-	window.setTimeout(function() {sound.play()},2000);
+	window.setTimeout(function() {schuss.play()},2000);
 	$("#sg2").delay(2250).show(0);
-	window.setTimeout(function() {sound.play()},2250);
+	window.setTimeout(function() {schuss2.play()},2250);
 	$("#sg3").delay(2500).show(0);
-	window.setTimeout(function() {sound.play()},2500);
+	window.setTimeout(function() {schuss.play()},2500);
 	$("#sk1").delay(2750).show(0);
-	window.setTimeout(function() {sound.play()},2750);
+	window.setTimeout(function() {schuss.play()},2750);
 	
 //Moorhuhn-Bild animieren
 	$("#huhnstartpage").delay(2900).fadeIn(1700);
@@ -62,6 +65,7 @@ function main () {
 	$("#button_start_1").delay(3100).fadeIn(1700);
 	$("#button_start_2").delay(3300).fadeIn(1700);
 	$("#button_start_3").delay(3500).fadeIn(1700);
+	
 	
 //mouseover effekt
 	$("#button_start_0").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
