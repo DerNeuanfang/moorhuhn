@@ -17,8 +17,26 @@ body {
 	overflow: hidden;
 }
 
+#status {
+	color: green;
+}
+
+#score {
+	left: 0px;
+	bottom: -20px;
+	color: red;
+	position: absolute;
+}
+
+#time {
+	right: 0px;
+	bottom: -20px;
+	color: red;
+	position: absolute
+}
+
 .chickenright {
-	background-image: url(../images/chickenRight.png);
+	background-image: url(../images/moorRight.png);
 	background-repeat: no-repeat;
 	width: 160px;
 	height: 119px;
@@ -28,36 +46,16 @@ body {
 }
 
 .chickenleft {
-	background-image: url(../images/chickenLeft.png);
+	background-image: url(../images/moorLeft.png);
 	background-repeat: no-repeat;
 	width: 160px;
 	height: 119px;
 	position: absolute;
-	left: 1150px;
-	top: 200px;
+	left: -150px;
+	top: 0px;
 }
 
-#chicken_right {
-	background-image: url(../images/chickenLeft.png);
-	background-repeat: no-repeat;
-	width: 160px;
-	height: 119px;
-	position: absolute;
-	left: 200px;
-	top: 80px;
-}
-
-#chicken_left {
-	background-image: url(../images/chickenRight.png);
-	background-repeat: no-repeat;
-	width: 120px;
-	height: 90px;
-	position: absolute;
-	left: 450px;
-	top: 300px;
-}
-
-#ammunition_1 {
+.ammunition {
 	background-image: url(../images/ammunition.png);
 	background-repeat: no-repeat;
 	width: 50px;
@@ -66,48 +64,13 @@ body {
 	right: 175px;
 	bottom: 0px;
 }
-#ammunition_2 {
-	background-image: url(../images/ammunition.png);
+
+#crosshair {
+	background-image: url(../images/crosshairsmall.png);
 	background-repeat: no-repeat;
-	width: 50px;
-	height: 35px;
+	width: 90px;
+	height: 90px;
 	position: absolute;
-	right: 140px;
-	bottom: 0px;
-}
-#ammunition_3 {
-	background-image: url(../images/ammunition.png);
-	background-repeat: no-repeat;
-	width: 50px;
-	height: 35px;
-	position: absolute;
-	right: 105px;
-	bottom: 0px;
-}
-#ammunition_4 {
-	background-image: url(../images/ammunition.png);
-	background-repeat: no-repeat;
-	width: 50px;
-	height: 35px;
-	position: absolute;
-	right: 70px;
-	bottom: 0px;
-}
-#ammunition_5 {
-	background-image: url(../images/ammunition.png);
-	background-repeat: no-repeat;
-	width: 50px;
-	height: 35px;
-	position: absolute;
-	right: 35px;
-	bottom: 0px;
-}
-#ammunition_6 {
-	background-image: url(../images/ammunition.png);
-	background-repeat: no-repeat;
-	width: 50px;
-	height: 35px;
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
+	left: 0px;
+	top: 0px;
 }
