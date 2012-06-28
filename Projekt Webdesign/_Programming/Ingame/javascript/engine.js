@@ -1,4 +1,0 @@
-/**
- * @author Sebastian Göltz
- */
-
