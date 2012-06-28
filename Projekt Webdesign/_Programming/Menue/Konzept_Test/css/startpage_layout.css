@@ -30,80 +30,128 @@
  }
  
  #M {
+ background-image: url(../images/letters/M.png);
+ background-repeat: no-repeat;
  left:-150px;
  position: absolute;
+ width: 82px;
+ height: 82px;
  top: 44px;
  }
  
  #O1 {
+ background-image: url(../images/letters/O1.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 43px;
  }
  
   #O2 {
+ background-image: url(../images/letters/O2.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 120px;
  position: absolute;
  top: 0px;
  }
  
   #R {
+ background-image: url(../images/letters/R.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 44px;
  }
  
   #H {
+ background-image: url(../images/letters/H.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 44px;
  }
  
   #H2 {
+ background-image: url(../images/letters/H.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 44px;
  }
  
   #U {
+ background-image: url(../images/letters/U.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 45px;
  }
  
   #N {
+ background-image: url(../images/letters/N.png);
+ background-repeat: no-repeat;
  left:-150px;
+ width: 82px;
+ height: 82px;
  position: absolute;
  top: 45px;
  }
  
  
  #sg1 {
+ background-image: url(../images/schussgross.png);
+ background-repeat: no-repeat;
  left: 270px;
+ width: 50px;
+ height: 50px;
  position:absolute;
  top: 150px; 
  display: none;
  }
  
  #sg2 {
+ background-image: url(../images/schussgross.png);
+ background-repeat: no-repeat;
  left: 600px;
+ width: 50px;
+ height: 50px;
  position:absolute;
  top: 150px;
  display: none;
  }
  
  #sg3 {
+ background-image: url(../images/schussgross.png);
+ background-repeat: no-repeat;
  left: 540px;
  position:absolute;
  top: 360px;
+ width: 50px;
+ height: 50px;
  display: none;
  }
  
  
  #sk1 {
+ background-image: url(../images/schussklein.png);
+ background-repeat: no-repeat;
  left: 150px;
  position:absolute;
  top: 300px;
+ width: 40px;
+ height: 40px;
  display: none;
  }
  

@@ -2,7 +2,15 @@
  * @author kleinm
  */
 
-function main () {
+$(document).ready(function() {
+//Start when DOM is fully loaded
+main();
+	
+});
+
+function main() {
+
+
 //Soundvariable deklarieren
 var schuss = new Audio('schuss.ogg');
 var schuss2 = new Audio('schuss.ogg');
@@ -72,9 +80,4 @@ var schuss2 = new Audio('schuss.ogg');
 	$("#button_start_1").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
 	$("#button_start_2").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
 	$("#button_start_3").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
-
-	
-
- 
-
 }
