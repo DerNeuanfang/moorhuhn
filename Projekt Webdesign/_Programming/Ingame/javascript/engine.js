@@ -19,12 +19,12 @@ function main () {
 	/*if (timer() == 0) { 
 	*clear interval(drawIntervalId)
 	*open highscore page
-	*/}
+	*/
 	
 	
 	//auslagern 
 	for(i=1;i<5;i++) {
-		$("#r" + i).click(function(){$($(this).fadeOut(0)});
+		$("#r" + i).click(function(){$(this).fadeOut(0)});
 	}
 	
 }
@@ -59,19 +59,20 @@ function startPosition_y(){
 
 function drawchicken() {
 	var left=0;
-	for(var i=1; i < 5;
-	if((left = $("#r1").offset().left)>900) {
-	($("#r1").css("left",100));
+	var i;
+	for(i=1; i < 5; i++) {
+		if((left = $("#r" + i).offset().left) > 900) {
+		($("#r" + i).css("left",100));
+		}
+		else if(i==1) {
+		$("#r" + i).css("left","+=0.8");
+		}
 	}
-	else {
-	$("#r1").css("left","+=0.8");
-	}
-	
-	
+	/*
 	$("#r2").css("left","+=1.0");
 	$("#r3").css("left","+=1.2");
 	$("#r4").css("left","+=1.4");
-	
+	*/
 }
 
 function aiming() {
