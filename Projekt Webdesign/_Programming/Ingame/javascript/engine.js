@@ -1,5 +1,5 @@
 /**
- * @author Sebastian Göltz
+ * @author Sebastian Göltz & Marc Klein
  */
  
 $(document).ready(function() {
@@ -14,8 +14,8 @@ function main () {
 
 	var i=0;
 	//Hühner y values das erste mal initialsieren
-	for(i=1;i<5;i++) setposY(1 , i);
-	for(i=1;i<5;i++) setposY(2 , i);
+	for(i=1;i<7;i++) setposY(1 , i);
+	for(i=1;i<7;i++) setposY(2 , i);
 	
 	//draw the chicken
 	var drawIntervalId = window.setInterval(drawchicken_right,10);
@@ -26,24 +26,23 @@ function main () {
 	*open highscore page
 	*/
 	
+	shoot_em_up();
+	$("#window").click(function(){audio_shoot();});
 	
-	//auslagern 
-	/*
-	for(i=1;i<5;i++) {
-		$("#r" + i).click(function(){
-									$(this).fadeOut(0);
-								//	$(this).fadeIn(0);
-									
-						});
-	}*/
 	
 }
 
 
 function setposY(s , i) {
 	//Y-Value wird initialisiert - Moorhuhn wird vertikal gesetzt
-	if(s==1) $("#r" + i).css("top",createYvalue());
-	else if (s==2) $("#l" + i).css("top",createYvalue());
+	if(s==1) {
+		$("#r" + i).css("top",createYvalue());
+		$("#r" + i).show();
+	}
+	else if (s==2) {
+		$("#l" + i).css("top",createYvalue());
+		$("#l" + i).show();
+	}
 }
 
 function createYvalue() {
@@ -69,9 +68,9 @@ function startPosition_y(){
 function drawchicken_right() {
 	var left=0;
 	var i;
-	for(i=1; i < 5; i++) {
-		if((left = $("#r" + i).offset().left) < -150) {
-			($("#r" + i).css("left",1200));
+	for(i=1; i < 7; i++) {
+		if((left=(parseInt($('#r' + i).css('left')))) <	-100) {
+			($("#r" + i).css("left",1000));
 			setposY(1 , i);
 		}
 		else {
@@ -87,17 +86,22 @@ function drawchicken_right() {
 			else if(i==4) {
 			$("#r" + i).css("left","-=1.4");
 			}
+			else if(i==5) {
+			$("#r" + i).css("left","-=1.5");
+			}
+			else if(i==6) {
+			$("#r" + i).css("left","-=1.6");
+			}
 		}
 	}
 }
 
 function drawchicken_left() {
-	
 	var left=0;
 	var i;
-	for(i=1; i < 5; i++) {
-		if((left = $("#l" + i).offset().left) > 1200) {
-			($("#l" + i).css("left",-150));
+	for(i=1; i < 7; i++) {
+		if((left=(parseInt($('#l' + i).css('left')))) >	1200) {
+			($("#l" + i).css("left",-100));
 			setposY(2, i);
 		}
 		else {
@@ -113,8 +117,13 @@ function drawchicken_left() {
 			else if(i==4) {
 			$("#l" + i).css("left","+=1.4");
 			}
+			else if(i==5) {
+			$("#l" + i).css("left","+=1.5");
+			}
+			else if(i==6) {
+			$("#l" + i).css("left","+=1.6");
+			}
 		}
-	//shoot_em_up(2,i);	
 	}
 }
 
@@ -129,23 +138,35 @@ function aiming() {
 
 function score() {
 //Score funktion aufrufen wenn geclickt worden ist und das Huhn getroffen worden ist
+//Score in der HTML ändern 
+//HTML-Score Element wird über ID angesprochen
+
 }
 
 
-function shoot_em_up(s , i) {
-
-		if(s==1) {
+function shoot_em_up() {
+	var i=1;
+		for(i=1;i<7;i++) {
 			$("#r" + i).click(function(){
-									$(this).fadeOut(0);
-								//	$(this).fadeIn(0);
-									
+										$(this).hide();
+										//$("#wolke") show() hide()
+										score();				
 			});
-		else if(s==2) {
 			$("#l" + i).click(function(){
-									$(this).fadeOut(0);
-								//	$(this).fadeIn(0);
-									
+										$(this).hide();
+										//$("#wolke") show() hide()
+										score();
 			});
 		}
-
 }
+
+function audio_shoot() {
+	var shoot = new Audio('schuss.ogg');
+	shoot.play();
+}
+
+
+
+
+
+
