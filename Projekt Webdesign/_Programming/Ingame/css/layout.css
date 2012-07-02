@@ -36,22 +36,22 @@ body {
 }
 
 .chickenright {
-	background-image: url(../images/moorRight.png);
+	background-image: url(../images/moorRightGif.gif);
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 119px;
+	position: absolute;
+	left: 1000px;
+	top: 0px;
+}
+
+.chickenleft {
+	background-image: url(../images/moorLeftGif.gif);
 	background-repeat: no-repeat;
 	width: 160px;
 	height: 119px;
 	position: absolute;
 	left: -150px;
-	top: 0px;
-}
-
-.chickenleft {
-	background-image: url(../images/moorLeft.png);
-	background-repeat: no-repeat;
-	width: 160px;
-	height: 119px;
-	position: absolute;
-	left: 150px;
 	top: 0px;
 }
 
