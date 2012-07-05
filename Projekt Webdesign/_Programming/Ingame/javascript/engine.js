@@ -2,6 +2,10 @@
  * @author Sebastian Göltz & Marc Klein
  */
  
+ //Globale Variable
+ var amu=5;
+ var score_value = 0;
+ 
 $(document).ready(function() {
 //Start when DOM is fully loaded
 //var intervalID = window.setInterval(...)
@@ -9,6 +13,8 @@ $(document).ready(function() {
 main();
 	
 });
+
+
 
 function main () {
 
@@ -25,13 +31,8 @@ function main () {
 	*clear interval(drawIntervalId)
 	*open highscore page
 	*/
-	
 	shoot_em_up();
-	$("#window").click(function(){audio_shoot();});
-	
-	
 }
-
 
 function setposY(s , i) {
 	//Y-Value wird initialisiert - Moorhuhn wird vertikal gesetzt
@@ -48,18 +49,6 @@ function setposY(s , i) {
 function createYvalue() {
 	return Math.round((((Math.random()*Math.random())*1000)%400));
 }
-
-/*
-function startPosition_x(){
-	if(Math.round((Math.random()*1000)%2) == 1)
-	{
-		$(".chickenLeft").css("left", Math.round((Math.random()*(-1000))%(-150)));
-	}
-	else
-	{
-		$(".chickenRight").css("right", Math.round((Math.random()*(-1000))%(-150)));
-	}
-}*/
 
 function startPosition_y(){
 	return Math.round((((Math.random()*Math.random())*1000)%400));
@@ -137,33 +126,98 @@ function aiming() {
 
 
 function score() {
-//Score funktion aufrufen wenn geclickt worden ist und das Huhn getroffen worden ist
-//Score in der HTML ändern 
-//HTML-Score Element wird über ID angesprochen
-
+	document.getElementById('score').innerHTML = score_value+=100;
 }
 
 
 function shoot_em_up() {
 	var i=1;
+	//Variable für die "#window".click function
+	var amu_request_1;
+	
+	//Schuss Sound beim klicken aufs "Game Fenster"
+	/*
+	$("#window").click(function(){ 	
+		
+		if(ammunition() === 1) {
+			audio_shoot();
+			amu = amu -1;
+			
+			for(i=1;i<7;i++) {
+			$("#r" + i).click(function(){
+					$(this).hide();
+					score();
+			});
+			
+			$("#l" + i).click(function(){
+				$(this).hide();
+				score();
+			});
+			}	
+		}
+		else $("#window").click(function(){audio_noammunition();});
+	});*/
+	
+	$("#window").click(function () {
+		if(ammunition() === 1) {
+			audio_shoot();
+			amu--;
+		}
+		else sound_noammuntion();
+	});
+	
+	//Click function zum Huhn-Abschuss
 		for(i=1;i<7;i++) {
 			$("#r" + i).click(function(){
-										$(this).hide();
-										//$("#wolke") show() hide()
-										score();				
+				if(ammunition() === 1) {
+					$(this).hide("drop", { direction: "down" }, 1000);
+					score();
+				}
 			});
+			
 			$("#l" + i).click(function(){
-										$(this).hide();
-										//$("#wolke") show() hide()
-										score();
+				if(ammunition() === 1) {
+				$(this).hide("drop", { direction: "down" }, 1000);
+				score();
+				}
 			});
-		}
+		}	
+		
 }
 
 function audio_shoot() {
 	var shoot = new Audio('schuss.ogg');
 	shoot.play();
 }
+
+function audio_reload() {
+	var reload = new Audio('reload.ogg');
+	reload.play();
+}
+
+function audio_noammunition() {
+	var noammunition = new Audio('noammunition.ogg');
+	noammunition.play();
+}
+
+
+function ammunition() {
+	
+	if (amu > 0) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+	
+}
+
+function reload () {
+
+	//amu = 5;
+
+}
+
 
 
 

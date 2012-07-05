@@ -38,8 +38,8 @@ body {
 .chickenright {
 	background-image: url(../images/moorRightGif.gif);
 	background-repeat: no-repeat;
-	width: 160px;
-	height: 119px;
+	width: 75px;
+	height: 56px;
 	position: absolute;
 	left: 1000px;
 	top: 0px;
@@ -48,8 +48,8 @@ body {
 .chickenleft {
 	background-image: url(../images/moorLeftGif.gif);
 	background-repeat: no-repeat;
-	width: 160px;
-	height: 119px;
+	width: 75px;
+	height: 56px;
 	position: absolute;
 	left: -100px;
 	top: 0px;
