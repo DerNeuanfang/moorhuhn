@@ -5,6 +5,8 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
+ var seconds = 10;
+ var timer_stop = false;
  
 $(document).ready(function() {
 //Start when DOM is fully loaded
@@ -22,17 +24,58 @@ function main () {
 	//Hühner y values das erste mal initialsieren
 	for(i=1;i<7;i++) setposY(1 , i);
 	for(i=1;i<7;i++) setposY(2 , i);
-	
-	//draw the chicken
-	var drawIntervalId = window.setInterval(drawchicken_right,10);
-	var drawIntervalId = window.setInterval(drawchicken_left,10);
+
+    //set timer
+    var timer_intervalId = window.setInterval(countdown, 1000);
+    //draw the chicken
+    var draw_right_IntervalId = window.setInterval(drawchicken_right,10);
+    var draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+    shoot_em_up();
+
+    if(timer_stop == true)
+    {
+        alert('STOP');
+        window.clearInterval(draw_left_IntervalId);
+        window.clearInterval(draw_right_IntervalId);
+        window.clearInterval(timer_intervalId);
+    }
+
+    /**
+
+    */
+
 	
 	/*if (timer() == 0) { 
 	*clear interval(drawIntervalId)
 	*open highscore page
 	*/
-	shoot_em_up();
+
 }
+function countdown(){
+    var element = document.getElementById('time');
+    if(seconds >= 0)
+    {
+        var h = Math.floor(seconds / 3600);
+        var m = Math.floor((seconds % 3600) / 60);
+        var s = seconds % 60;
+        element.innerHTML=
+            leadingzero(h) + ':' +
+            leadingzero(m) + ':' +
+            leadingzero(s);
+        seconds--;
+    }
+    else
+    {
+        timer_stop = true;
+    }
+
+}
+
+function leadingzero(number)
+{
+    return (number < 10) ? '0' + number : number;
+}
+
 
 function setposY(s , i) {
 	//Y-Value wird initialisiert - Moorhuhn wird vertikal gesetzt
