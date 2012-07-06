@@ -6,7 +6,7 @@
  var amu=5;
  var score_value = 0;
  var seconds = 10;
- var timer_stop = false;
+ var timer_stop = 0;
  
 $(document).ready(function() {
 //Start when DOM is fully loaded
@@ -31,14 +31,15 @@ function main () {
     var draw_right_IntervalId = window.setInterval(drawchicken_right,10);
     var draw_left_IntervalId = window.setInterval(drawchicken_left,10);
     shoot_em_up();
-
-    if(timer_stop == true)
+alert('STOP1');
+    if(timer_stop === 1)
     {
         alert('STOP');
         window.clearInterval(draw_left_IntervalId);
         window.clearInterval(draw_right_IntervalId);
         window.clearInterval(timer_intervalId);
     }
+    alert('STOP2');
 
     /**
 
@@ -66,7 +67,8 @@ function countdown(){
     }
     else
     {
-        timer_stop = true;
+        timer_stop = 1;
+        alert('STOP3');
     }
 
 }
