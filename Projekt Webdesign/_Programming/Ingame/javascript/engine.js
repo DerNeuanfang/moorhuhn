@@ -7,11 +7,10 @@
  var score_value = 0;
  var seconds = 10;
  var timer_stop = 0;
+ var KEY_SPACE = 32;
  
 $(document).ready(function() {
 //Start when DOM is fully loaded
-//var intervalID = window.setInterval(...)
-//window.clearInterval(intervalID);
 main();
 	
 });
@@ -19,7 +18,7 @@ main();
 
 
 function main () {
-
+	
 	var i=0;
 	//Hühner y values das erste mal initialsieren
 	for(i=1;i<7;i++) setposY(1 , i);
@@ -31,19 +30,16 @@ function main () {
     var draw_right_IntervalId = window.setInterval(drawchicken_right,10);
     var draw_left_IntervalId = window.setInterval(drawchicken_left,10);
     shoot_em_up();
-alert('STOP1');
+
     if(timer_stop === 1)
     {
-        alert('STOP');
         window.clearInterval(draw_left_IntervalId);
         window.clearInterval(draw_right_IntervalId);
         window.clearInterval(timer_intervalId);
     }
-    alert('STOP2');
 
-    /**
-
-    */
+	//Beim drücken einer Taste ruft er die function reload auf
+	document.onkeydown = reload;
 
 	
 	/*if (timer() == 0) { 
@@ -68,7 +64,6 @@ function countdown(){
     else
     {
         timer_stop = 1;
-        alert('STOP3');
     }
 
 }
@@ -177,36 +172,14 @@ function score() {
 
 function shoot_em_up() {
 	var i=1;
-	//Variable für die "#window".click function
-	var amu_request_1;
-	
+
 	//Schuss Sound beim klicken aufs "Game Fenster"
-	/*
-	$("#window").click(function(){ 	
-		
-		if(ammunition() === 1) {
-			audio_shoot();
-			amu = amu -1;
-			
-			for(i=1;i<7;i++) {
-			$("#r" + i).click(function(){
-					$(this).hide();
-					score();
-			});
-			
-			$("#l" + i).click(function(){
-				$(this).hide();
-				score();
-			});
-			}	
-		}
-		else $("#window").click(function(){audio_noammunition();});
-	});*/
 	
 	$("#window").click(function () {
 		if(ammunition() === 1) {
 			audio_shoot();
 			amu--;
+			//muni hide
 		}
 		else sound_noammuntion();
 	});
@@ -257,10 +230,13 @@ function ammunition() {
 	
 }
 
-function reload () {
+function reload (event_space) {
 
-	//amu = 5;
-
+	if(event_space.keyCode == KEY_SPACE) {
+		amu= 5;
+		//muni show
+	}
+	else return 0;
 }
 
 
