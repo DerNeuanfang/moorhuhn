@@ -24,19 +24,14 @@ function main () {
 	for(i=1;i<7;i++) setposY(1 , i);
 	for(i=1;i<7;i++) setposY(2 , i);
 
-    //set timer
-    var timer_intervalId = window.setInterval(countdown, 1000);
+
     //draw the chicken
-    var draw_right_IntervalId = window.setInterval(drawchicken_right,10);
-    var draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+    draw_right_IntervalId = window.setInterval(drawchicken_right,10);
+    draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+    //set timer
+    timer_intervalId = window.setInterval(countdown, 1000);    
     shoot_em_up();
 
-    if(timer_stop === 1)
-    {
-        window.clearInterval(draw_left_IntervalId);
-        window.clearInterval(draw_right_IntervalId);
-        window.clearInterval(timer_intervalId);
-    }
 
 	//Beim drücken einer Taste ruft er die function reload auf
 	document.onkeydown = reload;
@@ -48,22 +43,28 @@ function main () {
 	*/
 
 }
-function countdown(){
+function countdown() {
     var element = document.getElementById('time');
     if(seconds >= 0)
     {
-        var h = Math.floor(seconds / 3600);
-        var m = Math.floor((seconds % 3600) / 60);
-        var s = seconds % 60;
-        element.innerHTML=
-            leadingzero(h) + ':' +
-            leadingzero(m) + ':' +
-            leadingzero(s);
-        seconds--;
-    }
-    else
-    {
-        timer_stop = 1;
+
+        if (seconds === 0) {
+        	alert("A");
+        	window.clearInterval(draw_left_IntervalId);
+        	window.clearInterval(draw_right_IntervalId);
+        	window.clearInterval(timer_intervalId);
+        } else {
+    	
+	        var h = Math.floor(seconds / 3600);
+	        var m = Math.floor((seconds % 3600) / 60);
+	        var s = seconds % 60;
+	        element.innerHTML=
+	            leadingzero(h) + ':' +
+	            leadingzero(m) + ':' +
+	            leadingzero(s);
+	        seconds--;
+        }
+
     }
 
 }
@@ -72,7 +73,6 @@ function leadingzero(number)
 {
     return (number < 10) ? '0' + number : number;
 }
-
 
 function setposY(s , i) {
 	//Y-Value wird initialisiert - Moorhuhn wird vertikal gesetzt
