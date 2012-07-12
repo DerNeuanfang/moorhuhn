@@ -12,8 +12,12 @@ function main() {
 
 
 //Soundvariable deklarieren
-var schuss = new Audio('schuss.ogg');
-var schuss2 = new Audio('schuss.ogg');
+var schuss = new Audio('sounds/schuss.ogg');
+var schuss2 = new Audio('sounds/schuss.ogg');
+var schuss3 = new Audio('sounds/schuss.ogg');
+var schuss4 = new Audio('sounds/schuss.ogg');
+//var schuss3 = new Audio('schuss.ogg');
+//var schuss4 = new Audio('schuss.ogg');
 //window.setTimeout(function() {schuss.play()},2000);
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
@@ -60,9 +64,9 @@ var schuss2 = new Audio('schuss.ogg');
 	$("#sg2").delay(2250).show(0);
 	window.setTimeout(function() {schuss2.play()},2250);
 	$("#sg3").delay(2500).show(0);
-	window.setTimeout(function() {schuss.play()},2500);
+	window.setTimeout(function() {schuss3.play()},2500);
 	$("#sk1").delay(2750).show(0);
-	window.setTimeout(function() {schuss.play()},2750);
+	window.setTimeout(function() {schuss4.play()},2750);
 	
 //Moorhuhn-Bild animieren
 	$("#huhnstartpage").delay(2900).fadeIn(1700);

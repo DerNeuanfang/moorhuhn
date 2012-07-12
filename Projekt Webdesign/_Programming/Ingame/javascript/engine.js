@@ -26,6 +26,9 @@ function main () {
 	
 	//Munition setzen
 	set_position_ammo();
+	
+	
+	//disableSelection(document.getElementById('score'));
 
 
     //draw the chicken
@@ -199,7 +202,7 @@ function shoot_em_up() {
 		for(i=1;i<7;i++) {
 			$("#r" + i).click(function(){
 				if(ammunition() === 1) {
-					$(this).hide("drop", { direction: "down" }, 1000);
+					$(this).hide("drop", { direction: "down" }, 500);
 					score();
 					
 				}
@@ -207,7 +210,7 @@ function shoot_em_up() {
 			
 			$("#l" + i).click(function(){
 				if(ammunition() === 1) {
-				$(this).hide("drop", { direction: "down" }, 1000);
+				$(this).hide("drop", { direction: "down" }, 500);
 				score();
 				
 				}
@@ -245,8 +248,11 @@ function ammunition() {
 
 function reload (event_space) {
 	var i;
+	var reload = new Audio("sounds/reload.ogg");
 	if(event_space.keyCode == KEY_SPACE) {
+		if(amu < 5) reload.play();
 		amu= 5;
+		
 		//muni show
 		for(i = 1; i<6; i++)
 		{
