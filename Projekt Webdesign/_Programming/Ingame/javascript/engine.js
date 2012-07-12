@@ -220,12 +220,12 @@ function shoot_em_up() {
 }
 
 function audio_shoot() {
-	var shoot = new Audio('schuss.ogg');
+	var shoot = new Audio('sounds/schuss.ogg');
 	shoot.play();
 }
 
 function audio_reload() {
-	var reload = new Audio('reload.ogg');
+	var reload = new Audio('sounds/reload.ogg');
 	reload.play();
 }
 
@@ -248,9 +248,8 @@ function ammunition() {
 
 function reload (event_space) {
 	var i;
-	var reload = new Audio("sounds/reload.ogg");
 	if(event_space.keyCode == KEY_SPACE) {
-		if(amu < 5) reload.play();
+		if(amu < 5) audio_reload();
 		amu= 5;
 		
 		//muni show
