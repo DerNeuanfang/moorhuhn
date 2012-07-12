@@ -1,0 +1,35 @@
+/**
+ * @author kleinm
+ */
+#huhnstartpage {
+ background-image: url(../images/huhn.png);
+ background-repeat: no-repeat;
+ width:150px;
+ height: 250px;
+ left: 620px;
+ position:absolute;
+ top: 346px;
+ display: none;
+ }
+ 
+ #huhnaboutus {
+ background-image: url(../images/huhn.png);
+ background-repeat: no-repeat;
+ width: 150px;
+ height: 250px;
+ left: 620px;
+ position:absolute;
+ bottom:-50px;
+ }
+ 
+ #huhnimpressum {
+ background-image: url(../images/huhn_2.png);
+ background-repeat: no-repeat;
+ left: 0px;
+ bottom: 280px;
+ width: 250px;
+ height: 150px;
+ position:absolute;
+
+ }
+ 

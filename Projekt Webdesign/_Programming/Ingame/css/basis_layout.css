@@ -1,0 +1,24 @@
+/**
+ * @author kleinm
+ */
+ 
+ body {
+ background-color: grey;
+ }
+ 
+ 
+ #window {
+background-color: white; 
+border: 2px solid;
+width: 920px; 
+height: 550px; 
+position: absolute;
+left: 50%;
+top: 50%;
+margin: -275px 0 0 -475px;
+overflow:hidden;
+ }
+ 
+
+
+ 
