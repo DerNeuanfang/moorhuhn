@@ -54,7 +54,7 @@ function countdown() {
     {
 
         if (seconds === 0) {
-        	alert("ENDE!");
+        	//alert("ENDE!");
         	window.clearInterval(draw_left_IntervalId);
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
@@ -271,7 +271,7 @@ function set_position_ammo(){
 function reduce_ammo(){
 	$("#m" + amu).hide();
 	amu--;
-	alert(amu);
+	//alert(amu);
 }
 
 
