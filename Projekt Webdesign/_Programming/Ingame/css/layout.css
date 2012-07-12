@@ -3,7 +3,7 @@ body {
 }
 
 #window {
-	background-image: url(../images/background.png);
+	background-image: url(../images/background_desert.png);
 	background-repeat: no-repeat;
 	background-position: fixed;
 	background-position-x: 300px;
