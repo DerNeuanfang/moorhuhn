@@ -5,7 +5,7 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 10;
+ var seconds = 60;
  var timer_stop = 0;
  var KEY_SPACE = 32;
  
@@ -23,13 +23,18 @@ function main () {
 	//Hühner y values das erste mal initialsieren
 	for(i=1;i<7;i++) setposY(1 , i);
 	for(i=1;i<7;i++) setposY(2 , i);
+	
+	//Munition setzen
+	set_position_ammo();
 
 
     //draw the chicken
     draw_right_IntervalId = window.setInterval(drawchicken_right,10);
     draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+    
     //set timer
-    timer_intervalId = window.setInterval(countdown, 1000);    
+    //timer_intervalId = window.setInterval(countdown, 1000);    
+    //draw_crosshair_IntervalId = window.setInterval(aiming, 200);
     shoot_em_up();
 
 
@@ -49,7 +54,7 @@ function countdown() {
     {
 
         if (seconds === 0) {
-        	alert("A");
+        	alert("ENDE!");
         	window.clearInterval(draw_left_IntervalId);
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
@@ -158,8 +163,13 @@ function drawchicken_left() {
 
 function aiming() {
 	$("#window").mousemove(function(e){
-		$("#crosshair").css("left", e.pageX-300);
-		$("#crosshair").css("top", e.pageY-134);
+		//var relativeX = e.pageX - this.offsetLeft-50;
+    	//var relativeY = e.pageY - this.offsetTop-50;
+		$('#crosshair').css("left", e.pageX - this.offsetLeft-50);
+		$('#crosshair').css("top", e.pageY - this.offsetTop-50);
+
+		//$("#crosshair").css("left", e.pageX-$('#window').offset.left);
+		//$("#crosshair").css("top", e.pageY-$('#window').offset.top);
 		$('#status').html(e.pageX +', '+ e.pageY);
 	});
 }
@@ -178,7 +188,8 @@ function shoot_em_up() {
 	$("#window").click(function () {
 		if(ammunition() === 1) {
 			audio_shoot();
-			amu--;
+			reduce_ammo();
+			
 			//muni hide
 		}
 		else sound_noammuntion();
@@ -190,6 +201,7 @@ function shoot_em_up() {
 				if(ammunition() === 1) {
 					$(this).hide("drop", { direction: "down" }, 1000);
 					score();
+					
 				}
 			});
 			
@@ -197,6 +209,7 @@ function shoot_em_up() {
 				if(ammunition() === 1) {
 				$(this).hide("drop", { direction: "down" }, 1000);
 				score();
+				
 				}
 			});
 		}	
@@ -231,12 +244,34 @@ function ammunition() {
 }
 
 function reload (event_space) {
-
+	var i;
 	if(event_space.keyCode == KEY_SPACE) {
 		amu= 5;
 		//muni show
+		for(i = 1; i<6; i++)
+		{
+			$('#m' + i).show();
+		}
 	}
 	else return 0;
+}
+
+function set_position_ammo(){
+	var i;
+	var s = parseInt($(".ammunition").css("left"));
+
+	for(i = 1; i < 6; i++)
+	{
+		$("#m" + i).css("left", s);
+		s = s + 50;
+		//alert("Zeichne Munnition " + i);
+	}
+}
+
+function reduce_ammo(){
+	$("#m" + amu).hide();
+	amu--;
+	alert(amu);
 }
 
 

@@ -3,7 +3,7 @@ body {
 }
 
 #window {
-	background-image: url(../images/backgroundSpace.png);
+	background-image: url(../images/background.png);
 	background-repeat: no-repeat;
 	background-position: fixed;
 	background-position-x: 300px;
@@ -23,14 +23,16 @@ body {
 
 #score {
 	left: 0px;
-	bottom: -20px;
+	bottom: -30px;
+	font-size: 35px;
 	color: red;
 	position: absolute;
 }
 
 #time {
 	right: 0px;
-	bottom: -20px;
+	bottom: -30px;
+	font-size: 35px;
 	color: red;
 	position: absolute
 }
@@ -43,6 +45,7 @@ body {
 	position: absolute;
 	left: 1000px;
 	top: 0px;
+	z-index: 50;
 }
 
 .chickenleft {
@@ -53,6 +56,7 @@ body {
 	position: absolute;
 	left: -100px;
 	top: 0px;
+	z-index: 50;
 }
 
 .ammunition {
@@ -61,7 +65,7 @@ body {
 	width: 50px;
 	height: 35px;
 	position: absolute;
-	right: 175px;
+	left: 300px;
 	bottom: 0px;
 }
 
@@ -73,4 +77,5 @@ body {
 	position: absolute;
 	left: 0px;
 	top: 0px;
+	
 }
