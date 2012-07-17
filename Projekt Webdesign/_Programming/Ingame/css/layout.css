@@ -1,12 +1,13 @@
 body {
-	background-color: grey;
+	background-color:grey;
 }
 
 #window {
 	background-image: url(../images/background_desert.png);
 	background-repeat: no-repeat;
 	background-position: fixed;
-	background-position-x: 300px;
+	/*Verursacht im Chrome den Bug, das das bild um 300 nach rechts verschoben wird. */
+	/*background-position-x: 300px;*/
 	border: 2px solid;
 	width: 920px;
 	height: 550px;
@@ -73,6 +74,7 @@ body {
 	background-image: url(../images/crosshairSmall.png);
 	background-repeat: no-repeat;
 	width: 90px;
+	display:none;
 	height: 90px;
 	position: absolute;
 	left: 0px;

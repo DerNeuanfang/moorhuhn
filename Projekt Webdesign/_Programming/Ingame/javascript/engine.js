@@ -36,7 +36,7 @@ function main () {
     draw_left_IntervalId = window.setInterval(drawchicken_left,10);
     
     //set timer
-    //timer_intervalId = window.setInterval(countdown, 1000);    
+    timer_intervalId = window.setInterval(countdown, 1000);    
     //draw_crosshair_IntervalId = window.setInterval(aiming, 200);
     shoot_em_up();
 
@@ -249,13 +249,14 @@ function ammunition() {
 function reload (event_space) {
 	var i;
 	if(event_space.keyCode == KEY_SPACE) {
-		if(amu < 5) audio_reload();
-		amu= 5;
-		
-		//muni show
-		for(i = 1; i<6; i++)
-		{
-			$('#m' + i).show();
+		if(amu < 1) {
+			audio_reload();
+			amu= 5; 
+					//muni show
+			for(i = 1; i<6; i++)
+			{
+				$('#m' + i).show();
+			}
 		}
 	}
 	else return 0;
