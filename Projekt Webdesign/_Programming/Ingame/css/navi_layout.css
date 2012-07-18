@@ -9,3 +9,6 @@
  position:absolute;
  }
  
+  #navi_without_animation a {
+ color:black;
+ }

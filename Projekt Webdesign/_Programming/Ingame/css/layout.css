@@ -1,13 +1,14 @@
 body {
-	background-color:grey;
+background: -moz-linear-gradient(center top, orange 0%, red 100%);
+/*background: -moz-linear-gradient(0% 6% 270deg,#2B2B2B, #9E9E9E);*/
+background: -webkit-gradient(linear, left top, left bottom, from(orange), to(red));
+height: 100%;
 }
 
 #window {
 	background-image: url(../images/background_desert.png);
 	background-repeat: no-repeat;
-	background-position: fixed;
-	/*Verursacht im Chrome den Bug, das das bild um 300 nach rechts verschoben wird. */
-	/*background-position-x: 300px;*/
+	/*background-position: fixed;*/
 	border: 2px solid;
 	width: 920px;
 	height: 550px;
@@ -16,6 +17,7 @@ body {
 	top: 50%;
 	margin: -275px 0 0 -475px;
 	overflow: hidden;
+	/*box-shadow: 10px 10px;*/
 }
 
 #status {
