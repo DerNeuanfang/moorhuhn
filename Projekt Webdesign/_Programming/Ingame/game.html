@@ -11,7 +11,21 @@
         <title>Moorhuhn</title>
     </head>
     <body>
-    	<div id="window" style="cursor: url(images/crosshairSmall_3.png), pointer;">
+    	<div id="window" style="cursor: url(images/crosshair_black.png) 44 40, pointer;">
+    		<div id="status">
+    			<h2 align="center">Herzlichen Gl&uuml;ckwunsch!</h2>
+    			<h3 align="left">Deine Punkte: <div id="endscore">0</div></h3>
+    			<h3 align="left">Dein Name: <input name="vorname" type="text" size="15" maxlength="30"> </h3>
+    			<div id="button_menu">
+    				<button onClick="window.location='index.html' " style="font-family:Comic Sans MS; font-size:15;  width:80px; height: 40px; background-image: url(images/button_start_0.png); background-repeat: no-repeat; background-size: contain;">Hauptmen&uuml;</button>
+    			</div>
+    			<div id="button_play_again">
+    				<button onClick="window.location='game.html' " style="font-family:Comic Sans MS; font-size:15;  width:80px; height: 40px; background-image: url(images/button_start_0.png); background-repeat: no-repeat; background-size: contain;">Nochmal spielen</button>
+    			</div>
+    			<div id="button_send_highscore">
+    				<button onClick="window.location='html/highscore.html' " style="font-family:Comic Sans MS; font-size:15;  width:80px; height: 40px; background-image: url(images/button_start_0.png); background-repeat: no-repeat; background-size: contain;">Highscore eintragen;</button>
+    			</div>
+    		</div>
     		<h2 id="score">0</h2>
     		<h2 id="time"></h2>
     		<div class="chickenleft" id="l1"></div>
