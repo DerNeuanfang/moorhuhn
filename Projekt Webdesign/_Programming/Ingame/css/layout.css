@@ -6,7 +6,7 @@ height: 100%;
 }
 
 #window {
-	background-image: url(../images/background_desert.png);
+	/*background-image: url(../images/background_desert.png);*/
 	background-repeat: no-repeat;
 	/*background-position: fixed;*/
 	border: 2px solid;

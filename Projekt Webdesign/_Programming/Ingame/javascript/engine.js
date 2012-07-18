@@ -5,7 +5,7 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 60;
+ var seconds = 3;
  var timer_stop = 0;
  var KEY_SPACE = 32;
  
@@ -61,6 +61,7 @@ function countdown() {
         	window.clearInterval(draw_left_IntervalId);
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
+        	document.location.href = "index.html";
         } else {
     	
 	        var h = Math.floor(seconds / 3600);
