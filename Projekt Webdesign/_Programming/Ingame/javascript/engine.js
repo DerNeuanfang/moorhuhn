@@ -5,7 +5,8 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 3;
+ var seconds = 20;
+ var start_seconds = 3;
  var timer_stop = 0;
  var KEY_SPACE = 32;
  
@@ -19,6 +20,8 @@ main();
 
 function main () {
 	
+	start_timer_IntervalId = window.setInterval(timer_countdown, 1000);
+	/*
 	var i=0;
 	//Hühner y values das erste mal initialsieren
 	for(i=1;i<7;i++) setposY(1 , i);
@@ -49,6 +52,7 @@ function main () {
 	*clear interval(drawIntervalId)
 	*open highscore page
 	*/
+	
 
 }
 function countdown() {
@@ -61,7 +65,9 @@ function countdown() {
         	window.clearInterval(draw_left_IntervalId);
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
-        	document.location.href = "index.html";
+        	load_endscreen();
+        	
+        	//document.location.href = "index.html";
         } else {
     	
 	        var h = Math.floor(seconds / 3600);
@@ -76,6 +82,57 @@ function countdown() {
 
     }
 
+}
+
+function timer_countdown() {
+	var element = document.getElementById('start_time');
+	if(start_seconds >= 0)
+	{
+		if(start_seconds === 0)
+		{
+			window.clearInterval(start_timer_IntervalId);
+			$('#start_div').css("visibility", "hidden");
+			var i=0;
+	//Hühner y values das erste mal initialsieren
+	for(i=1;i<7;i++) setposY(1 , i);
+	for(i=1;i<7;i++) setposY(2 , i);
+	
+	//Munition setzen
+	set_position_ammo();
+	
+	
+	//disableSelection(document.getElementById('score'));
+
+
+    //draw the chicken
+    draw_right_IntervalId = window.setInterval(drawchicken_right,10);
+    draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+    
+    //set timer
+    timer_intervalId = window.setInterval(countdown, 1000);    
+    //draw_crosshair_IntervalId = window.setInterval(aiming, 200);
+    shoot_em_up();
+
+
+	//Beim drücken einer Taste ruft er die function reload auf
+	document.onkeydown = reload;
+
+		}
+		else
+		{
+			var s = start_seconds % 60;
+			element.innerHTML = leadingzero(s);
+			start_seconds --; 
+		}
+	}
+}
+
+function load_endscreen()
+{
+	//alert("hallo");
+	$('#status').css("visibility", "visible");
+	$('#status').css("z-index", "200");
+	document.getElementById('endscore').innerHTML = score_value;
 }
 
 function leadingzero(number)
@@ -276,7 +333,7 @@ function set_position_ammo(){
 }
 
 function reduce_ammo(){
-	$("#m" + amu).hide();
+	$("#m" + amu).hide("drop", { direction: "up" }, 200);
 	amu--;
 	//alert(amu);
 }
