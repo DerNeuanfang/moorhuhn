@@ -5,10 +5,10 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 20;
+ var seconds = 5;
  var start_seconds = 3;
  var timer_stop = 0;
- var KEY_SPACE = 32;
+ var KEY_SPACE = 32; 
  
 $(document).ready(function() {
 //Start when DOM is fully loaded
@@ -66,7 +66,7 @@ function countdown() {
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
         	load_endscreen();
-        	
+			fade_game_out();
         	//document.location.href = "index.html";
         } else {
     	
@@ -130,7 +130,8 @@ function timer_countdown() {
 function load_endscreen()
 {
 	//alert("hallo");
-	$('#status').css("visibility", "visible");
+	$("#status").fadeIn(500);
+	//$('#status').css("visibility", "visible");
 	$('#status').css("z-index", "200");
 	document.getElementById('endscore').innerHTML = score_value;
 }
@@ -339,7 +340,22 @@ function reduce_ammo(){
 }
 
 
+function fade_game_out() {
 
+		for(i=1;i<7;i++) {
+			$("#r" + i).fadeOut(500);
+			$("#l" + i).fadeOut(500);
+		}	
+		
+			for(i=1;i<7;i++) {
+			$("#m" + i).fadeOut(500);
+		}
+	
+		$("#score").fadeOut(500);
+		$("#time").fadeOut(500);
+		$("#ammunition").fadeOut(500);
+		
+}
 
 
 

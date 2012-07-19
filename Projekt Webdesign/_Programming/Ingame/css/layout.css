@@ -1,8 +1,5 @@
 body {
-/*background: -moz-linear-gradient(center top, orange 0%, red 100%);*/
 background-image: -moz-linear-gradient(bottom left, orange 0%, red 100%);
-/*background: -moz-linear-gradient(0% 6% 270deg,#2B2B2B, #9E9E9E);*/
-/*background: -webkit-gradient(linear, left top, left bottom, from(orange), to(red));*/
 background-image: -webkit-linear-gradient(bottom left, orange 0%, red 100%);
 height: 100%;
 }
@@ -29,11 +26,9 @@ height: 100%;
 	position: absolute;
 	left: 25%;
 	top: 25%;
-	visibility: hidden;
+	/*visibility: hidden;*/
+	display:none;
 	opacity:0.6;
-	
- 
-	
 }
 
 #score {
@@ -76,7 +71,7 @@ height: 100%;
 	height: 550px;
 	position: absolute;
 	visibility: visible;
-	opacity: 0,6;
+	opacity: 0,7;
 	
 }
 
