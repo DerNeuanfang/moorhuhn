@@ -350,6 +350,8 @@ function fade_game_out() {
 			for(i=1;i<7;i++) {
 			$("#m" + i).fadeOut(500);
 		}
+		
+		amu=0;
 	
 		$("#score").fadeOut(500);
 		$("#time").fadeOut(500);
