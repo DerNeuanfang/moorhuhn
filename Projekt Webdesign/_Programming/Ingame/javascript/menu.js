@@ -1,5 +1,5 @@
 /**
- * @author kleinm
+ * @author Sebastian GÃ¶ltz & Marc Klein
  */
 
 $(document).ready(function() {
@@ -21,7 +21,7 @@ var schuss4 = new Audio('sounds/schuss.ogg');
 //window.setTimeout(function() {schuss.play()},2000);
 //Schriftzug "Moorhuhn" wird animiert
 //ich baue eine delay funktion ein aus folgendem Grund:
-//Ich habe die Möglichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings träge und undynamisch
+//Ich habe die Mï¿½glichkeit in animate einen delay zu platzieren, dadurch wird die animation allerdings trï¿½ge und undynamisch
 //Mit der delay() funktion verhindere ich das
 	
 	$("#M").delay(1550).animate({
@@ -57,7 +57,7 @@ var schuss4 = new Audio('sounds/schuss.ogg');
 	});
 
 
-//Schüsse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
+//Schï¿½sse mit einem delay anzeigen (erst nachdem der "Moorhuhn"-Schriftzug im Bild ist)
 	
 	$("#sg1").delay(2000).show(0);
 	window.setTimeout(function() {schuss.play()},2000);

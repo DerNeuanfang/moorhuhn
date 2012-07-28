@@ -19,42 +19,9 @@ main();
 
 
 function main () {
-	
 	start_timer_IntervalId = window.setInterval(timer_countdown, 1000);
-	/*
-	var i=0;
-	//Hühner y values das erste mal initialsieren
-	for(i=1;i<7;i++) setposY(1 , i);
-	for(i=1;i<7;i++) setposY(2 , i);
-	
-	//Munition setzen
-	set_position_ammo();
-	
-	
-	//disableSelection(document.getElementById('score'));
-
-
-    //draw the chicken
-    draw_right_IntervalId = window.setInterval(drawchicken_right,10);
-    draw_left_IntervalId = window.setInterval(drawchicken_left,10);
-    
-    //set timer
-    timer_intervalId = window.setInterval(countdown, 1000);    
-    //draw_crosshair_IntervalId = window.setInterval(aiming, 200);
-    shoot_em_up();
-
-
-	//Beim drücken einer Taste ruft er die function reload auf
-	document.onkeydown = reload;
-
-	
-	/*if (timer() == 0) { 
-	*clear interval(drawIntervalId)
-	*open highscore page
-	*/
-	
-
 }
+
 function countdown() {
     var element = document.getElementById('time');
     if(seconds >= 0)
