@@ -16,7 +16,7 @@ height: 100%;
 	top: 50%;
 	margin: -275px 0 0 -475px;
 	overflow: hidden;
-	/*box-shadow: 10px 10px;*/
+	box-shadow: 10px 10px;
 }
 
 #status {
@@ -26,9 +26,8 @@ height: 100%;
 	position: absolute;
 	left: 25%;
 	top: 25%;
-	/*visibility: hidden;*/
 	display:none;
-	opacity:0.6;
+	opacity:0.7;
 }
 
 #score {
@@ -56,8 +55,8 @@ height: 100%;
 }
 
 #start_time {
-	top: 25%;
-	left: 25%;
+	top: 220px;
+	left: 420px;
 	font-size: 60px;
 	font-weight: bold;
 	color: black;
@@ -65,13 +64,14 @@ height: 100%;
 }
 
 #start_div {
+	background-color: grey;
 	top: 0%;
 	left: 0%;
 	width: 920px;
 	height: 550px;
 	position: absolute;
 	visibility: visible;
-	opacity: 0,7;
+	opacity: 0.6;
 	
 }
 

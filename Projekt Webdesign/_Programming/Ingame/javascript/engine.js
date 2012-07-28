@@ -5,7 +5,7 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 5;
+ var seconds = 20;
  var start_seconds = 3;
  var timer_stop = 0;
  var KEY_SPACE = 32; 
@@ -157,10 +157,6 @@ function createYvalue() {
 	return Math.round((((Math.random()*Math.random())*1000)%400));
 }
 
-function startPosition_y(){
-	return Math.round((((Math.random()*Math.random())*1000)%400));
-}
-
 function drawchicken_right() {
 	var left=0;
 	var i;
@@ -222,20 +218,6 @@ function drawchicken_left() {
 		}
 	}
 }
-
-function aiming() {
-	$("#window").mousemove(function(e){
-		//var relativeX = e.pageX - this.offsetLeft-50;
-    	//var relativeY = e.pageY - this.offsetTop-50;
-		$('#crosshair').css("left", e.pageX - this.offsetLeft-50);
-		$('#crosshair').css("top", e.pageY - this.offsetTop-50);
-
-		//$("#crosshair").css("left", e.pageX-$('#window').offset.left);
-		//$("#crosshair").css("top", e.pageY-$('#window').offset.top);
-		$('#status').html(e.pageX +', '+ e.pageY);
-	});
-}
-
 
 function score() {
 	document.getElementById('score').innerHTML = score_value+=100;
