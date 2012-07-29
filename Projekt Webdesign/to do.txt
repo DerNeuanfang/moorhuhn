@@ -1,8 +1,0 @@
-- aiming (fadenkreuz) : richtig position (basti)
-- munition muss pro schuss hiden und beim nachladen wieder show(); (basti)
-- highscore (basti/marc)
-	- nach dem Spiel muss die Seite erscheinen! 
-- dokumentation (wie wir das spiel programmiert haben etc.) (basti)
-- spielanleitung/beiseiten (marc)
-- hintergründe/nachladen sound (marc)
-- 
