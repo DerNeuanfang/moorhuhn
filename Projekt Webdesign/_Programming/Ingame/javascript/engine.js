@@ -5,7 +5,7 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 20;
+ var seconds = 40;
  var start_seconds = 3;
  var timer_stop = 0;
  var KEY_SPACE = 32; 
@@ -60,29 +60,23 @@ function timer_countdown() {
 			window.clearInterval(start_timer_IntervalId);
 			$('#start_div').css("visibility", "hidden");
 			var i=0;
-	//Hühner y values das erste mal initialsieren
-	for(i=1;i<7;i++) setposY(1 , i);
-	for(i=1;i<7;i++) setposY(2 , i);
+			//Hühner y values das erste mal initialsieren
+			for(i=1;i<7;i++) setposY(1 , i);
+			for(i=1;i<7;i++) setposY(2 , i);
 	
-	//Munition setzen
-	set_position_ammo();
+			//Munition setzen
+			set_position_ammo();
 	
-	
-	//disableSelection(document.getElementById('score'));
-
-
-    //draw the chicken
-    draw_right_IntervalId = window.setInterval(drawchicken_right,10);
-    draw_left_IntervalId = window.setInterval(drawchicken_left,10);
+			//draw the chicken
+    		draw_right_IntervalId = window.setInterval(drawchicken_right,10);
+    		draw_left_IntervalId = window.setInterval(drawchicken_left,10);
     
-    //set timer
-    timer_intervalId = window.setInterval(countdown, 1000);    
-    //draw_crosshair_IntervalId = window.setInterval(aiming, 200);
-    shoot_em_up();
-
-
-	//Beim drücken einer Taste ruft er die function reload auf
-	document.onkeydown = reload;
+    		//set timer
+    		timer_intervalId = window.setInterval(countdown, 1000);    
+			shoot_em_up();
+	
+			//Beim drücken einer Taste ruft er die function reload auf
+			document.onkeydown = reload;
 
 		}
 		else
@@ -120,6 +114,7 @@ function setposY(s , i) {
 	}
 }
 
+//Zufalls y-Startwert
 function createYvalue() {
 	return Math.round((((Math.random()*Math.random())*1000)%400));
 }
@@ -278,20 +273,18 @@ function set_position_ammo(){
 	{
 		$("#m" + i).css("left", s);
 		s = s + 50;
-		//alert("Zeichne Munnition " + i);
 	}
 }
 
 function reduce_ammo(){
 	$("#m" + amu).hide("drop", { direction: "up" }, 200);
 	amu--;
-	//alert(amu);
 }
 
 
 function fade_game_out() {
 
-		for(i=1;i<7;i++) {
+		for(i=1;i<7;i++) {j
 			$("#r" + i).fadeOut(500);
 			$("#l" + i).fadeOut(500);
 		}	
@@ -306,6 +299,18 @@ function fade_game_out() {
 		$("#time").fadeOut(500);
 		$("#ammunition").fadeOut(500);
 		
+}
+
+function setHighscore() {
+	var erg = $('input:text[name=vorname]').val();
+	var conn = new XMLHttpRequest();
+    conn.open("GET", "http://localhost:8000/setHighscore?name="+erg+"&score="+score_value);
+	conn.onreadystatechange = function() {
+        console.log(conn.status);
+        console.log(conn.readyState);
+    }
+    conn.send();
+	alert("Highscore wurde gesetzt");
 }
 
 

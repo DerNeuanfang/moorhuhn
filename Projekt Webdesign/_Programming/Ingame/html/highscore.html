@@ -6,17 +6,41 @@
 <head>
 <title> Project - X </title>
 <!--integrate Stylesheet/CSS -->
+<style>
+ul
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul li
+{
+	padding:5px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(function() {
+	$.getJSON("http://localhost:8000/highscore", function(data) {
+	  var items = [];
+
+	  $.each(data, function(key, val) {
+	    items.push('<li><b>Name:</b> <span style="color:red;">'+ key +'</span> <b>Punkte:</b> <span class="color:green;">'+ val + '</span></li>');
+	  });
+	
+	  $('<ul/>', { html: items.join('') }).appendTo('#window');
+	});
+});
+</script>
 <link rel="stylesheet" type="text/css" href="../css/startpage_layout.css">
 <link rel="stylesheet" type="text/css" href="../css/basis_layout.css">
 <link rel="stylesheet" type="text/css" href="../css/huhn_layout.css">
 <link rel="stylesheet" type="text/css" href="../css/navi_layout.css">
+
 </head>
-<body onload="main();">
-<div id="window">
-
-
-
-
-</div>
+<body>
+	<div id="window">
+		<h1 align="center">Highscore</h1>
+	</div>
 </body>
 </html>

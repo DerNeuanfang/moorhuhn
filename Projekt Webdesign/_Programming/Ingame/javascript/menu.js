@@ -85,3 +85,7 @@ var schuss4 = new Audio('sounds/schuss.ogg');
 	$("#button_start_2").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
 	$("#button_start_3").mouseover(function(){$(this).fadeOut(0);$(this).fadeIn(100);});
 }
+
+
+
+
