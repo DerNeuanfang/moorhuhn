@@ -89,7 +89,6 @@ function timer_countdown() {
 
 function load_endscreen()
 {
-	//alert("hallo");
 	$("#status").fadeIn(500);
 	//$('#status').css("visibility", "visible");
 	$('#status').css("z-index", "200");
@@ -284,7 +283,8 @@ function reduce_ammo(){
 
 function fade_game_out() {
 
-		for(i=1;i<7;i++) {j
+
+		for(i=1;i<7;i++) {
 			$("#r" + i).fadeOut(500);
 			$("#l" + i).fadeOut(500);
 		}	
@@ -299,7 +299,9 @@ function fade_game_out() {
 		$("#time").fadeOut(500);
 		$("#ammunition").fadeOut(500);
 		
+		
 }
+
 
 function setHighscore() {
 	var erg = $('input:text[name=vorname]').val();
