@@ -5,7 +5,7 @@
  //Globale Variable
  var amu=5;
  var score_value = 0;
- var seconds = 40;
+ var seconds = 5;
  var start_seconds = 3;
  var timer_stop = 0;
  var KEY_SPACE = 32; 
@@ -33,8 +33,7 @@ function countdown() {
         	window.clearInterval(draw_right_IntervalId);
         	window.clearInterval(timer_intervalId);
         	load_endscreen();
-			fade_game_out();
-        	//document.location.href = "index.html";
+			
         } else {
     	
 	        var h = Math.floor(seconds / 3600);
@@ -95,6 +94,7 @@ function load_endscreen()
 	//$('#status').css("visibility", "visible");
 	$('#status').css("z-index", "200");
 	document.getElementById('endscore').innerHTML = score_value;
+	fade_game_out();
 }
 
 function leadingzero(number)
